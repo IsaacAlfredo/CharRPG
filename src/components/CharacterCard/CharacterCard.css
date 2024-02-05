@@ -7,14 +7,15 @@
   height: max-content;
 
   padding: 10px;
-  margin-bottom: 5px;
+  margin-bottom: 20px;
 
-  border: 1px solid black;
+  border: 2px solid aliceblue;
+  border-radius: 10px;
+  box-shadow: 0vw 0vw 10px 5px black, inset 0vw 0vw 10px 2px black;
 }
 
 .CharacterCard div {
   display: flex;
-  border: 1px solid red;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
@@ -34,4 +35,6 @@
   width: 350px;
   flex-direction: column;
   height: 200px;
+  border: 1px solid aliceblue;
+  border-radius: 10px;
 }
