@@ -1,0 +1,37 @@
+.CharacterCard {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: max-content;
+  height: max-content;
+
+  padding: 10px;
+  margin-bottom: 5px;
+
+  border: 1px solid black;
+}
+
+.CharacterCard div {
+  display: flex;
+  border: 1px solid red;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.CharacterCard .BaseInfo {
+  width: 300px;
+  height: 100px;
+  flex-direction: column;
+}
+
+.CharacterCard .BaseInfo p {
+  font-size: 0.8rem;
+}
+
+.CharacterCard .Stats {
+  width: 350px;
+  flex-direction: column;
+  height: 200px;
+}

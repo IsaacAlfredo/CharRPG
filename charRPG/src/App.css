@@ -1,6 +1,47 @@
 #root {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 2rem;
   text-align: center;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.ListContainer {
+  margin-top: 10px;
+}
+
+.ShowList {
+  margin-bottom: 10px;
+}
+
+.FormContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+
+  height: 150px;
+  width: 800px;
+
+  border: 1px solid black;
+}
+
+.FormContainer label {
+  width: 300px;
+  display: flex;
+  height: 30px;
+
+  align-items: center;
+  justify-content: space-between;
+}
+.FormContainer label p {
+  font-size: 0.8rem;
+}
+.FormContainer input {
+  margin-left: 10px;
+  margin-bottom: 2px;
 }
