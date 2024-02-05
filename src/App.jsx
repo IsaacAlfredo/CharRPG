@@ -4,6 +4,13 @@ import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { CharacterCard } from "./components/CharacterCard/CharacterCard";
 
+/*Função onde ocorre a requisição POST. O método da biblioteca axios, axios.post, recebe a URL da rota POST do servidor e
+um objeto, que será convertido em JSON pela própria biblioteca e enviado pelo body da requisição. A função é executada
+quando o botão "Enviar" é acionado. O parâmetro "formData" é passado por meio da função handleSubmit, que utiliza o
+Hook useForm. Em resumo, o que a função faz é criar um objeto, onde as chaves são os input (e seu nome é definido
+com o "register") e os valores serão o que for preenchido pelo usuário. Assim, passamos todos os dados necessários
+para a criação do personagem pela rota mencionada anteriormente.*/
+
 async function onSubmit(formData) {
   const route = "http://localhost:3000/create";
   console.log(formData);
@@ -18,6 +25,9 @@ function App() {
   const { register, handleSubmit } = useForm();
   const [charactersArray, setCharactersArray] = useState([]);
 
+  /*Função onde ocorre a requisição GET. O método da biblioteca axios, axios.get, recebe a URL da rota GET do servidor. 
+  A função é executada quando o botão "Listar Personagens" é acionado. 
+  */
   async function showList() {
     const route = "http://localhost:3000/";
     const response = await axios.get(route);
@@ -28,6 +38,8 @@ function App() {
   }
 
   return (
+    /*Em react, as funções dos componentes retornam HTML, portanto o código a seguir nada mais é que a definição da página
+    com algumas funções referentes ao funcionamento dos botões */
     <>
       <div className="FormContainer">
         <label>
@@ -70,7 +82,7 @@ function App() {
           Carisma
           <input type="number" {...register("charisma")}></input>
         </label>
-        <button onClick={() => handleSubmit(onSubmit)()}>Submit</button>
+        <button onClick={() => handleSubmit(onSubmit)()}>Enviar</button>
       </div>
       <div className="ListContainer">
         <button className="ShowList" onClick={showList}>
